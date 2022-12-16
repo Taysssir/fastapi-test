@@ -14,7 +14,7 @@ def save_otp(
 
 def find_otp_life_time(recipient_id: str, session_id: str):
     query = "select * from my_otps where recipient_id=:recipient_id and session_id=:session_id and " \
-            "created_on >= now() at time zone 'utc' - interval '60 minutes'"
+            "created_on >= now() at time zone 'utc' - interval '1 minutes'"
     return database.fetch_one(query, values={"recipient_id": recipient_id, "session_id": session_id})
 
 
