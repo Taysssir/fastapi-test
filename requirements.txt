@@ -1,0 +1,22 @@
+fastapi
+uvicorn
+
+SQLAlchemy
+databases
+
+pydantic[dotenv]
+passlib
+bcrypt
+
+pytz
+
+asyncpg
+psycopg2
+
+pyjwt
+python-jose[cryptography]
+
+python-multipart
+fastapi-mail
+# aiofiles
+# twilio
