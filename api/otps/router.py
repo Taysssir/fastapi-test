@@ -35,7 +35,7 @@ async def send_otp(
         """.format(otp_code)
     print("Sending OTP Code via Email : {0} ".format(otp_code))
     print(message)
-    await emailUtil.send_email(subject, [recipient], message)
+    # await emailUtil.send_email(subject, [recipient], message)
     return {
         "recipient_id":recipient,
         "session_id": session_id,
