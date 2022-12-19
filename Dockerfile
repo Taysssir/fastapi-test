@@ -4,4 +4,7 @@ ADD requirements.txt .
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-CMD ["uvicorn", "api.main:app", "--reload", "--host", "0.0.0.0", "--port", "5000"]
+COPY wait.sh /
+RUN chmod +x /wait.sh
+ENTRYPOINT ["/wait.sh"]
+
