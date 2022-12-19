@@ -232,6 +232,46 @@ You will see the automatic interactive API documentation (provided by Swagger UI
 
 ![App Running in Browser](images/View_app_browser.png)
 
+## Test Cases
+
+---
+
+### Test Case 0 : Check the Register functionality
+#### Test Scenario : 
+- User register in with a valid email id and password
+![Register User](images/Register_User_data.png)
+![Successful Registration](images/Register_User_REsponse_OK.png)
+![Receive OTP Code](images/Register_User_OK_OTPCode_MailFormat.png)
+
+---
+### Test Case 1 : Verify the OTP Code Received by mail (Console):
+#### Test Scenario : LifeTime OTP expired
+- User verify OTP Code Received by email (or console), But LifeTime expired(More than one minute)!
+![Verify OTP Code](images/Verif_OTP_Expired.png)
+![Verify OTP Code Response](images/Verif_OTP_Expired_Response.png)
+
+#### Test Scenario : LifeTime OTP Valid
+- User verify OTP Code Received by email (or console) and LifeTime valid (less than one minute)!
+![Verify OTP Code Response](images/Verif_OTP_Valid_Response.png)
+---
+
+### Test Case 2 : Check the Login functionality
+#### Test Scenario : User Account Not Activated
+- User log in with a valid email and password, But account not activated yet(OTP NOT Validated!
+![Login User](images/Login_User_Data.png)
+![Login User Not Activated](images/Login_User_Not_Activated.png)
+
+#### Test Scenario : User Account Activated
+- User log in with a valid email, password and account activated
+![Login User Account Activated](images/Login_USer_Activated_Account_Data.png)
+![Successful Login User Account Activated](images/Login_USer_Activated_Account_Succ.png)
+
+#### Test Scenario : User Account Activated invalid Credentials
+- User log in with a invalid email or password and account activated
+![Login User invalid Credentials](images/Login_User_Activated_Invalid_Cred_Data.png)
+![Login User invalid Credentials Response](images/Login_User_Activated_Invalid_Cred_Data_Response.png)
+
+---
 
 ## Licence
 
