@@ -22,6 +22,7 @@ Global Architecture :
 .
 ├── docker-compose.yml
 ├── Dockerfile
+├── wait.sh
 ├── requirements.txt
 ├── api
 │   ├── config.py
@@ -57,6 +58,7 @@ Containerize application :
 ```
 ├── docker-compose.yml
 ├── Dockerfile
+├── wait.sh
 ```
 
 In this Application, we have created 2 services:
@@ -69,6 +71,7 @@ In this Application, we have created 2 services:
 2. Backend/Python API Service (api)
 * It uses docker image of fastapi-test.
 * This layer interacts with the database.
+* Script `wait.sh` : Timeout for launching our App while database finish starting process
 * This layer is also responsible for creating various API routes for interacting with the database service.
 
 **requirements.txt** : All the dependencies needed to install
