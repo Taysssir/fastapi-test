@@ -171,10 +171,66 @@ For Test :
 ```
 docker-compose up --build
 ```
+If evreything is run, you should view somthe'
+
+```
+db_1   | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db_1   | 
+db_1   | 2022-12-16 18:43:09.129 UTC [1] LOG:  starting PostgreSQL 13.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 12.2.1_git20220924-r4) 12.2.1 20220924, 64-bit
+db_1   | 2022-12-16 18:43:09.130 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db_1   | 2022-12-16 18:43:09.130 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db_1   | 2022-12-16 18:43:09.183 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db_1   | 2022-12-16 18:43:09.281 UTC [19] LOG:  database system was interrupted; last known up at 2022-12-16 12:15:22 UTC
+db_1   | 2022-12-16 18:43:10.149 UTC [19] LOG:  database system was not properly shut down; automatic recovery in progress
+db_1   | 2022-12-16 18:43:10.179 UTC [19] LOG:  redo starts at 0/15F2640
+db_1   | 2022-12-16 18:43:10.179 UTC [19] LOG:  invalid record length at 0/15F2728: wanted 24, got 0
+db_1   | 2022-12-16 18:43:10.179 UTC [19] LOG:  redo done at 0/15F26F0
+db_1   | 2022-12-16 18:43:11.459 UTC [1] LOG:  database system is ready to accept connections
+fastapi-test | INFO:     Will watch for changes in these directories: ['/']
+fastapi-test | INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+fastapi-test | INFO:     Started reloader process [1] using StatReload
+fastapi-test | INFO:     Started server process [7]
+fastapi-test | INFO:     Waiting for application startup.
+fastapi-test | INFO:     Application startup complete.
+```
+
 For Prod : 
 ```
 docker-compose up -d
 ```
+
+you should in console 
+```
+Starting fastapitest_db_1
+Starting fastapi-test
+```
+
+To check the logs, run:
+
+1. For the whole App
+
+```
+docker-compose logs
+```
+
+2. For the Database
+
+```
+docker logs fastapitest_db_1
+```
+
+3. For the API
+
+```
+docker logs fastapi-test
+``` 
+
+After running “docker-compose up --build” all the containers will start automatically. 
+Now our application will be up & running on your browser (`http://0.0.0.0:5000/docs#/`)
+You will see the automatic interactive API documentation (provided by Swagger UI):
+
+![App Running in Browser](images/View_app_browser.png)
+
 
 ## Licence
 
