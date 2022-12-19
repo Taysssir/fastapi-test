@@ -171,7 +171,7 @@ For Test :
 ```
 docker-compose up --build
 ```
-If evreything is run, you should view somthe'
+If evreything is running successfully , you should view something like this in your console :
 
 ```
 db_1   | PostgreSQL Database directory appears to contain a database; Skipping initialization
@@ -199,7 +199,8 @@ For Prod :
 docker-compose up -d
 ```
 
-you should in console 
+you should view something like this in your console :
+
 ```
 Starting fastapitest_db_1
 Starting fastapi-test
