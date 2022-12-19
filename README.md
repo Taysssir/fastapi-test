@@ -237,11 +237,16 @@ You will see the automatic interactive API documentation (provided by Swagger UI
 ---
 
 ### Test Case 0 : Check the Register functionality
-#### Test Scenario : 
+#### Test Scenario : New User account
 - User register in with a valid email id and password
 ![Register User](images/Register_User_data.png)
 ![Successful Registration](images/Register_User_REsponse_OK.png)
 ![Receive OTP Code](images/Register_User_OK_OTPCode_MailFormat.png)
+
+#### Test Scenario : User account already existed
+- User register in with a valid email and password, but user already existed
+![Register User](images/Register_User_account_already_existed.png)
+![User account already existed](images/Register_User_account_already_existed_Response.png)
 
 ---
 ### Test Case 1 : Verify the OTP Code Received by mail (Console):
